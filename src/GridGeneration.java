@@ -3,12 +3,67 @@ public class GridGeneration {
     private final int upperbound = 9;
     private final int lowerbound = 1;
     private int random;
+    int[] playerGrid = null; //test.toPlayerGrid(temp1D);
+    int[] finalGrid = null;
 
     public static void main(String[] args) {
         GridGeneration test = new GridGeneration();
         test.initialCreation();
         printGrid(test.initialGrid, 3);
-        printGrid(test.generate9x9(test.initialGrid), 9);
+        int[][] temp = test.generate9x9(test.initialGrid);
+        printGrid(temp, 9);
+        int[] temp1D = test.toSingleArray(temp);
+        int[] playerGrid = test.toPlayerGrid(temp1D);
+        System.out.println("\nPlayer Grid");
+        printGrid1D(playerGrid);
+    }
+
+    /**
+     * getFinalGrid1D
+     * @return int[]
+     */
+//    public int[] getFinalGrid1D() {
+//        return this.finalGrid1D;
+//    }
+
+    /**
+     * getPlayerGrid
+     * @return int[]
+     */
+    public int[] getPlayerGrid() {
+        return this.playerGrid;
+    }
+
+    /**
+     * toPlayerGrid method
+     * @param fullGrid int[]
+     * @return int[]
+     */
+    public int[] toPlayerGrid(int[] fullGrid) {
+        int[] playerGrid = new int[81];
+        for(int i = 0; i < playerGrid.length;i++) {
+            if(((i % 6) != 0) && (i % 4) != 0) {
+                playerGrid[i] = fullGrid[i];
+            }
+        }
+        return playerGrid;
+    }
+
+    public int[] toSingleArray(int[][] tempGrid) {
+        int[] finalGrid = new int[tempGrid.length * tempGrid.length];
+        for(int row = 0; row < tempGrid.length;row ++) {
+            for(int column = 0; column < tempGrid[row].length;column++) {
+                finalGrid[(row * tempGrid.length) + column] = tempGrid[row][column];
+            }
+        }
+//        System.out.println();
+//        for(int i = 0; i < finalGrid.length; i ++) {
+//            if (i % 9 == 0) {
+//                System.out.println();
+//            }
+//            System.out.print(" " + finalGrid[i] + " ");
+//        }
+        return finalGrid;
     }
 
     public void initialCreation() {
@@ -132,21 +187,27 @@ public class GridGeneration {
         return currentColumn;
     }
 
+    public static void printGrid1D(int[] grid) {
+        System.out.println();
+        for(int i = 0; i < grid.length; i ++) {
+            if (i % 9 == 0) {
+                System.out.println();
+            }
+            System.out.print(" " + grid[i] + " ");
+        }
+    }
+
     public static void printGrid (int[][] grid, int size){
         System.out.println();
         int count = 0;
         for (int row = 0; row < grid.length; row++) {
             for (int column = 0; column < grid[row].length; column++) {
-                if (size == 3) {
-                    if (count % 3 == 0) {
+                if (size == 3)
+                    if (count % 3 == 0)
                         System.out.println();
-                    }
-                }
-                if (size == 9) {
-                    if (count % 9 == 0) {
+                if (size == 9)
+                    if (count % 9 == 0)
                         System.out.println();
-                    }
-                }
                 count++;
                 System.out.print(" " + grid[row][column] + " ");
             }
