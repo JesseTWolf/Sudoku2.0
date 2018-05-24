@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Sudoku 2.0:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6a86e723-e0f7-4259-b1ca-ffb80214d9b2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sudoku 2.0/Generation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sudoku 2.0/Generation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sudoku 2.0/SudokuGUI$GridListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sudoku 2.0/SudokuGUI$GridListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sudoku 2.0/SudokuGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sudoku 2.0/SudokuGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileIO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Generation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Generation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GridGeneration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sudoku.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SudokuGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SudokuGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,13 +19,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="4" />
+    <option name="PRINT_LINE_NUMBERS" value="true" />
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\jesse\Desktop" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Generation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Generation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4752">
-              <caret line="303" column="1" selection-end-line="303" selection-end-column="1" />
+            <state relative-caret-position="1024">
+              <caret line="70" column="44" lean-forward="true" selection-start-line="70" selection-start-column="44" selection-end-line="70" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -35,9 +39,10 @@
       <file leaf-file-name="SudokuGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SudokuGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="218" selection-start-line="218" selection-end-line="218" />
+            <state relative-caret-position="92">
+              <caret line="226" column="23" lean-forward="true" selection-start-line="226" selection-start-column="23" selection-end-line="226" selection-end-column="23" />
               <folding>
+                <element signature="e#0#14561#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#484#485#0" expanded="true" />
                 <element signature="e#532#533#0" expanded="true" />
@@ -66,16 +71,15 @@
         <option value="$PROJECT_DIR$/src/Sudoku.java" />
         <option value="$PROJECT_DIR$/src/FileIO.java" />
         <option value="$PROJECT_DIR$/src/GridGeneration.java" />
-        <option value="$PROJECT_DIR$/src/Generation.java" />
         <option value="$PROJECT_DIR$/src/SudokuGUI.java" />
+        <option value="$PROJECT_DIR$/src/Generation.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="663" />
-    <option name="y" value="207" />
-    <option name="width" value="654" />
-    <option name="height" value="690" />
+    <option name="x" value="949" />
+    <option name="width" value="980" />
+    <option name="height" value="1031" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -104,7 +108,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SudokuGame" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
@@ -119,7 +126,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Generation">
+  <component name="RunManager" selected="Application.SudokuGUI">
     <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI" />
       <module name="Sudoku 2.0" />
@@ -195,8 +202,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Generation" />
         <item itemvalue="Application.SudokuGUI" />
+        <item itemvalue="Application.Generation" />
         <item itemvalue="Application.GridGeneration" />
         <item itemvalue="Application.Sudoku" />
         <item itemvalue="Application.GUI" />
@@ -217,22 +224,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="633" y="0" width="653" height="687" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3281787" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3298969" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.03780069" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.038327526" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24980484" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.5007825" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298969" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -245,7 +253,6 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3281787" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -264,6 +271,7 @@
         <state relative-caret-position="3264">
           <caret line="210" column="57" lean-forward="true" selection-start-line="210" selection-start-column="57" selection-end-line="210" selection-end-column="57" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -290,6 +298,7 @@
         <state relative-caret-position="1872">
           <caret line="123" column="19" lean-forward="true" selection-start-line="123" selection-start-column="19" selection-end-line="123" selection-end-column="19" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -316,6 +325,7 @@
         <state relative-caret-position="2704">
           <caret line="175" column="22" selection-start-line="175" selection-start-column="22" selection-end-line="175" selection-end-column="22" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -342,6 +352,7 @@
         <state relative-caret-position="928">
           <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -368,6 +379,7 @@
         <state relative-caret-position="928">
           <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -394,6 +406,7 @@
         <state relative-caret-position="928">
           <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -413,6 +426,7 @@
         <state relative-caret-position="928">
           <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -432,6 +446,7 @@
         <state relative-caret-position="928">
           <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -451,6 +466,7 @@
         <state relative-caret-position="816">
           <caret line="58" column="75" lean-forward="true" selection-start-line="58" selection-start-column="75" selection-end-line="58" selection-end-column="75" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -470,6 +486,7 @@
         <state relative-caret-position="576">
           <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -489,6 +506,7 @@
         <state relative-caret-position="672">
           <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -508,6 +526,7 @@
         <state relative-caret-position="3984">
           <caret line="255" column="7" selection-start-line="255" selection-start-column="7" selection-end-line="255" selection-end-column="7" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -534,6 +553,7 @@
         <state relative-caret-position="3808">
           <caret line="241" column="11" lean-forward="true" selection-start-line="241" selection-start-column="11" selection-end-line="241" selection-end-column="11" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -553,6 +573,7 @@
         <state relative-caret-position="912">
           <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -645,13 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Generation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4752">
-          <caret line="303" column="1" selection-end-line="303" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -666,11 +680,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Generation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1024">
+          <caret line="70" column="44" lean-forward="true" selection-start-line="70" selection-start-column="44" selection-end-line="70" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SudokuGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="218" selection-start-line="218" selection-end-line="218" />
+        <state relative-caret-position="92">
+          <caret line="226" column="23" lean-forward="true" selection-start-line="226" selection-start-column="23" selection-end-line="226" selection-end-column="23" />
           <folding>
+            <element signature="e#0#14561#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -681,9 +703,82 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -1,4 +1,3 @@
-
 public class Generation {
     private int[][] initialGrid = new int[3][3];
     private final int upperbound = 9;
@@ -8,6 +7,10 @@ public class Generation {
     private int[] finalGrid1D;
     private int[] playerGrid;
 
+    /**
+     * main method that will demonstrate my grid generation. Used to verify everything is working properly.
+     * @param args String
+     */
     public static void main(String [] args) {
         Generation grid = new Generation();
         grid.printGrid2D(grid.initialGrid,3);
@@ -65,7 +68,6 @@ public class Generation {
         int[] playerGrid = new int[81];
         for(int i = 0; i < playerGrid.length;i++) {
             if((((i % randomWithRange(1, 9)) != 0)) && (i % randomWithRange(1,9)) != 0) {
-//                if(i != 1 && i != 9) {
                 playerGrid[i] = fullGrid[i];
             }
         }

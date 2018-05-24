@@ -13,66 +13,57 @@
  *
  *  2. TaxRateGUI.java
  *     - Create instance variables for:
- *       1. My Taxes Class object "myTaxes".
- *       2. Two JTextFields incomeTaxTextField and taxableIncomeTextField as instance variables in order for ease
- *          of use within my private classes.
- *       3. Four JCheckBoxes selfCheckBox, dependentChildCheckBox, threeLeggedDogCheckBox, and grandmotherCheckBox
- *          as instance variables in order for ease of use within my private classes.
- *          - In the default constructor definition:
- *           1. Create JFrame object using super's constructor and passing in "Income Tax Calculator" for a title.
- *              - Set default close operations to exit on close.
- *              - Set layout to a borderLayout.
- *           2. Create 3 separate JPanels to hold all of our individual elements.
- *              - All 3 JPanels will also house a grid layout to hold its elements.
- *              - Within these 3 JPanels we will create as follows:
- *              1. 1st JPanel will be located to the west most part of the frame and consist of:
- *                 - 3 RadioButtons Labeled "Single", "Married", "Single,Head of Household" respectively.
- *                 - These RadioButtons will be placed into a ButtonGroup in order to keep them linked together,
- *                   if they were not linked all three could be selected at the same time. This way that will not
- *                   happen.
- *                 - Each RadioButton will be given an ActionListener "RadioButtonListener"
- *                 - Will set the background of panel 1 to white and add all of my radioButtons to it.
- *              2. 2nd JPanel will be located in the center of the frame and consist of:
- *                 - 2 JTextFields labeled "taxableIncomeTextField" and "incomeTaxTextField". The taxableIncome field
- *                   will be used for user input. The incomeTax field is where we will output the end result of our
- *                   calculation to the user and is in such not editable by the user.
- *                   - Each JTextField will have a JLabel attached to it in order to label them properly.
- *                 - 1 Button labeled Compute. This button will be used to call upon our Taxes class calcIncomeTax
- *                   method.
- *                   - The button will be given an ActionListener "ComputeButtonListener".
- *                 - Will set the background of panel 2 to white and add the elements to the panel.
- *              3. 3rd Panel will be located in the east most part of the frame and consist of:
- *                 - 4 JCheckBoxes labeled "Self", "Dependent Child", "Three-legged Dog", and "Blind Grandmother"
- *                   respectively.
- *                   - Each CheckBox will have its background set to white and given an ActionListener
- *                     "CheckBoxListener".
- *                   - Will set the background of panel 3 to white and add the elements to the panel.
- *           3. Add all three panels to the frame settings each to their respective direction discussed above.
- *              - pack() and set my frame as visible.
- *       4. Create an ActionListener class "ComputeButtonListener" that will handle the action after ComputeButton has
- *          been clicked.
- *          - The actionPerformed method will consist of:
- *            - Capturing the string from my taxableIncomeTextField and stripping away the "$" and "," from this string.
- *              Then parsing it into a double for use in my calculations.
- *            - Will use Taxes method setTaxableIncome passing in the above value in order to set that objects taxable
- *              income double for use in the calculations.
- *            - Will use calcIncomeTax method from within my Taxes class in order to use all of the variables I have
- *              passed into it from my various ActionListeners to calculate the Income Tax this user should expect to
- *              pay. Will capture the double that is returned from this calculation and format it with a dollar sign and
- *              proper decimal point before sending it to my incomeTaxTextField for view by the user.
- *       5. Create an ActionListener class "CheckBoxListener" that will handle the actions from my check boxes.
- *          - The actionPerformed method will consist of:
- *            - A series of if statements that will call my Taxes class' setClaimSelf, setClaimChild, setClaimDog, and
- *              setClaimGrandmother respectively dependent upon which check boxes are selected or unselected within
- *              each action.
- *       6. Create an ActionListener class "RadioButtonListener" that will handle the actions from my radio buttons.
- *          - I will retrieve the label of the radio button through use of the getActionCommand method.
- *          - I will then use this to call my Taxes class' setStatus method passing into it the label of the respective
- *            radio button that had been clicked/selected.
+ *       1. Private final integers to hold Width and Height.
+ *       2. Private int to hold the totalPoints and initialize as 100.
+ *       3. Object of Generation class used to generate my grids.
+ *          - Create int[] answerGrid and fill using getFinalGrid1D() method from object of Generation class.
+ *          - Create int[] playerGrid and fill using getPlayerGrid() method from object of Generation class.
+ *       4. Private JButton[] buttons to hold the all of my 81 buttons that will make up my grid.
+ *
+ *     - In the default constructor definition:
+ *       1. Create JFrame object using super's constructor and passing in "Sudoku" for a title.
+ *          - Set default close operations to exit on close.
+ *          - Set layout to a borderLayout.
+ *          - Set resizeable to be false. Not allow it to be resize.
+ *       2. Create 13 separate JPanels to hold all of our individual elements.
+ *          - One will hold the mainGrid.
+ *          - 9 will hold the subGrids of 3 x 3 buttons.
+ *          - 1 will hold the leftmost 3 subGrids, another will hold the centermost 3 subGrids and the last will
+ *            hold the rightmost subGrids.
+ *          - Using all of these panels I will:
+ *            1. Set my mainGrid to be a gridLayout with 9 rows 9 columns.
+ *               - Within a double for loop I will create my buttons giving each an id to match their position within
+ *                 a 9x9 grid.
+ *               - Then will place each button within a subgrid dependent upon its unique id. Each button will also be
+ *                 given an action listener (GridListener)
+ *               - Each subGrid will be given a black line border for added aesthetic.
+ *               - Each column grid(left3, center3, and right3) will be set to be border layouts
+ *               - Then place each subGrid into its respective column using the border layouts directional properties:
+ *                 left3, center3, or right3.
+ *               - pack()
+ *               - Set visible.
+ *
+ *     - Private Class GridListener will implement ActionListener:
+ *       - String will be initialized to capture the action command using getActionCommand().
+ *       - int buttonID will be created to hold the string from above in int form.
+ *       - Within a try catch:
+ *         - Take userInput through a JOptionPane that will request an integer form the user.
+ *         - Try to parse the above userInput into an int.
+ *         - If it fails then NumberFormatException is caught and the user is notified and asked to try again.
+ *         - If it successfully parses then as long as the userInput is not null.
+ *           - I will call my checkAnswer method passing in the current integerInput, buttonID and answerGrid. Storing
+ *             the result into a boolean checkAnswer.
+ *           - If my checkAnswer boolean is true then:
+ *             - The current button is updated to match the users input.
+ *             - Player grid internally saved will also be updated.
+ *           - If my checkAnswer boolean is false then:
+ *             - A JOptionPane will be created and let the user know that they have entered incorrectly and that their
+ *               score has been lowered by one point and shows them their current score.
+ *           - Call my completeGrid method that will check to see if the grid is totally complete:
+ *             - If it is then the user will be output another JOptionPane letting them know that they won and show
+ *               them their final score.
+ *
  */
-
-
-
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -89,17 +80,16 @@ public class SudokuGUI extends JFrame {
     int[] answerGrid = gridGen.getFinalGrid1D();
     int[] playerGrid = gridGen.getPlayerGrid();
 
+    private JButton[] buttons = new JButton[81];
+    private JTextField[][] grid = new JTextField[9][9];
+
     public static void main(String[] args) {
         SudokuGUI game1 = new SudokuGUI();
     }
 
-    private JButton[] buttons = new JButton[81];
-    private JTextField[][] grid = new JTextField[9][9];
-
     public SudokuGUI() {
         super("Sudoku");
         setLayout(new BorderLayout());
-//        setMinimumSize(new Dimension(WIDTH, HEIGHT));
         setMaximumSize(new Dimension(WIDTH, HEIGHT));
         setResizable(false);
 
@@ -237,9 +227,7 @@ public class SudokuGUI extends JFrame {
                 return;
             }
         }
-        System.out.println("In complete grid method" + complete);
         if(complete) {
-            System.out.println("Inside if statement");
             JOptionPane.showMessageDialog(null, "Congratulations you have won. " +
                     "\nEnd Score is: " + totalPoints);
         }
@@ -254,11 +242,10 @@ public class SudokuGUI extends JFrame {
             String buttonString = e.getActionCommand();
             int buttonID = Integer.parseInt(buttonString);
             int integerInput = -1;
+            String userInput = "";
 
-            String userInput = ""; //= JOptionPane.showInputDialog("Please enter an integer:");
             try {
                 userInput = JOptionPane.showInputDialog("Please enter an integer:");
-//                userInput = Integer.parseInt(JOptionPane.showInputDialog("Please enter an integer:"));
                 integerInput = Integer.parseInt(userInput);
             } catch (NumberFormatException error) {
                 if(userInput == null) {
@@ -286,10 +273,6 @@ public class SudokuGUI extends JFrame {
                             "please try again. \nYour current points are: " + totalPoints);
                 }
             }
-            System.out.println(checkAnswer);
-            System.out.println(answerGrid[buttonID]);
-            System.out.println(userInput);
-            System.out.println(totalPoints);
             completeGrid();
         }
     }
